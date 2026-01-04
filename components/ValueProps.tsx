@@ -3,52 +3,56 @@ import React from 'react';
 
 const props = [
   {
-    title: 'Lightning Fast Previewing',
-    desc: 'See exactly how your thumbnails look across every platform UI instantly. No more uploads to private videos just to test contrast.',
+    title: 'Sistemas Médicos de Élite',
+    desc: 'Desarrollamos la infraestructura digital que su clínica necesita para proyectar autoridad y confianza desde el primer clic.',
     icon: (
-      <svg className="w-8 h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+      <svg className="w-10 h-10 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
       </svg>
     ),
-    color: 'bg-primary/20'
+    color: 'bg-primary/10',
+    centerTitle: false
   },
   {
-    title: 'AI-Powered Insights',
-    desc: 'Our advanced neural network analyzes your compositions for clarity, attention-pathing, and emotional impact before you go live.',
+    title: 'Automatización Clínica con IA',
+    desc: 'Despliega asistentes de triaje inteligentes 24/7 que gestionan citas, consultas y entrada de datos, liberando a tu personal médico.',
     icon: (
-      <svg className="w-8 h-8 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+      <svg className="w-10 h-10 text-brandAccent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
       </svg>
     ),
-    color: 'bg-secondary/20'
+    color: 'bg-brandAccent/10',
+    centerTitle: true
   },
   {
-    title: 'Seamless Collaboration',
-    desc: 'Invite your editors and managers to annotate directly on your frames. One link, unlimited feedback, total creative control.',
+    title: 'Adquisición de Pacientes',
+    desc: 'Estrategias de conversión diseñadas quirúrgicamente para atraer y retener pacientes de alto valor de manera constante.',
     icon: (
-      <svg className="w-8 h-8 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+      <svg className="w-10 h-10 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
       </svg>
     ),
-    color: 'bg-green-400/20'
+    color: 'bg-secondary/10',
+    centerTitle: false
   }
 ];
 
 const ValueProps: React.FC = () => {
   return (
-    <section id="features" className="max-w-7xl mx-auto py-32 px-6">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+    <section id="features" className="max-w-7xl mx-auto py-40 px-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
         {props.map((p, i) => (
-          <div key={i} className="group relative p-10 rounded-[2.5rem] bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-500 overflow-hidden">
-            <div className={`w-16 h-16 ${p.color} rounded-2xl flex items-center justify-center mb-8`}>
+          <div key={i} className="group relative p-12 rounded-[3rem] bg-white/[0.02] border border-white/10 hover:bg-white/[0.05] transition-all duration-700">
+            <div className={`w-20 h-20 ${p.color} rounded-[2rem] flex items-center justify-center mb-10 group-hover:scale-110 transition-transform ${p.centerTitle ? 'mx-auto' : ''}`}>
               {p.icon}
             </div>
-            <h3 className="text-2xl font-bold mb-4">{p.title}</h3>
-            <p className="text-white/50 leading-relaxed">
+            <h3 className={`text-3xl font-bold mb-6 tracking-tight ${p.centerTitle ? 'text-center mx-auto max-w-xs' : ''}`}>
+              {p.title}
+            </h3>
+            <p className={`text-white/40 text-lg leading-relaxed font-light ${p.centerTitle ? 'text-center' : ''}`}>
               {p.desc}
             </p>
-            {/* Hover decoration */}
-            <div className="absolute -right-4 -bottom-4 w-32 h-32 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/20 transition-all duration-500" />
+            <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 blur-[80px] group-hover:opacity-100 opacity-0 transition-opacity" />
           </div>
         ))}
       </div>

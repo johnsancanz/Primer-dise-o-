@@ -3,36 +3,31 @@ import React from 'react';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative flex flex-col items-center justify-center pt-20 pb-32 text-center px-4 overflow-hidden">
-      <div className="inline-block px-4 py-1.5 mb-8 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest animate-fade-in">
-        Revolutionizing Creator Workflows
+    <section className="relative flex flex-col items-center justify-center pt-32 pb-48 text-center px-6 overflow-hidden">
+      {/* Decorative Glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-primary/10 rounded-full blur-[150px] pointer-events-none" />
+      
+      <div className="inline-block px-5 py-2 mb-10 rounded-full bg-white/5 border border-white/10 text-primary/80 text-xs font-bold uppercase tracking-[0.2em] animate-pulse">
+        El Futuro del Crecimiento Médico
       </div>
       
-      <h1 className="text-[60px] leading-[1.1] md:text-[80px] font-extrabold max-w-4xl mb-6 tracking-tight">
-        Build content that <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">demands attention</span>.
+      <h1 className="text-[60px] md:text-[88px] font-black max-w-5xl mb-8 tracking-tight bg-gradient-to-b from-white to-white/40 bg-clip-text text-transparent leading-none">
+        Impulsa tu práctica con <br />
+        <span className="text-primary italic font-serif">sistemas web inteligentes.</span>
       </h1>
       
-      <p className="text-lg md:text-xl text-white/60 max-w-2xl mb-12 leading-relaxed">
-        Lumina helps creators optimize every frame of their video with AI-powered analysis and seamless collaboration. Stop guessing, start growing.
+      <p className="text-xl md:text-2xl text-white/50 max-w-3xl mb-16 leading-relaxed font-light">
+        Nos especializamos en construir portales médicos de alto rendimiento y automatización con IA 
+        que transforman clínicas locales en autoridades digitales líderes del sector.
       </p>
       
-      <div className="flex flex-col sm:flex-row gap-4 items-center animate-float">
-        <button className="relative group px-10 py-5 bg-primary rounded-full font-bold text-lg overflow-hidden transition-all hover:scale-105 shadow-[0_0_40px_rgba(102,64,255,0.4)]">
-          <span className="relative z-10">Start Your Free Trial</span>
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
+      <div className="flex flex-col sm:flex-row gap-6 items-center">
+        <button className="px-12 py-5 bg-primary text-black rounded-full font-black text-lg hover:scale-105 transition-all shadow-[0_0_50px_rgba(0,210,255,0.3)]">
+          Iniciar Crecimiento
         </button>
-        <button className="px-10 py-5 rounded-full bg-white/5 border border-white/10 font-bold text-lg hover:bg-white/10 transition-all">
-          Watch Demo
+        <button className="px-12 py-5 rounded-full bg-white/5 border border-white/10 font-bold text-lg hover:bg-white/10 transition-all backdrop-blur-md">
+          Ver Casos de Éxito
         </button>
-      </div>
-
-      <div className="mt-24 relative max-w-5xl mx-auto rounded-3xl overflow-hidden border border-white/10 shadow-2xl shadow-primary/20">
-        <img 
-          src="https://picsum.photos/1200/800?grayscale" 
-          alt="Platform dashboard" 
-          className="w-full h-auto opacity-80"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent" />
       </div>
     </section>
   );

@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Lumina - Elevate Your Content</title>
+    <title>GrowMED | Excelencia Médica mediante IA</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,28 +20,29 @@
               serif: ['Instrument Serif', 'serif'],
             },
             colors: {
-              primary: '#6640ff',
+              primary: '#00d2ff', // Medical Cyan
+              brandAccent: '#6640ff', // Tech Purple
               secondary: '#fa911a',
-              dark: '#0a0a0a',
-              herogray: '#141516',
+              dark: '#050505',
+              herogray: '#0a0a0b',
             },
             animation: {
-              'stars-move': 'starsMove 60s linear infinite',
-              'glow-pulse': 'glowPulse 8s ease-in-out infinite',
+              'stars-move': 'starsMove 40s linear infinite',
+              'glow-pulse': 'glowPulse 10s ease-in-out infinite',
               'float': 'float 6s ease-in-out infinite',
             },
             keyframes: {
               starsMove: {
-                '0%': { transform: 'translateX(0)' },
-                '100%': { transform: 'translateX(-50%)' },
+                '0%': { transform: 'translateX(-50%)' },
+                '100%': { transform: 'translateX(0)' },
               },
               glowPulse: {
-                '0%, 100%': { opacity: 0.3, transform: 'scale(1)' },
-                '50%': { opacity: 0.6, transform: 'scale(1.1)' },
+                '0%, 100%': { opacity: 0.2, transform: 'scale(1)' },
+                '50%': { opacity: 0.5, transform: 'scale(1.2)' },
               },
               float: {
                 '0%, 100%': { transform: 'translateY(0px)' },
-                '50%': { transform: 'translateY(-20px)' },
+                '50%': { transform: 'translateY(-15px)' },
               }
             }
           }
@@ -50,40 +51,33 @@
     </script>
     <style>
       body {
-        background-color: #0a0a0a;
+        background-color: #050505;
         color: white;
         margin: 0;
         overflow-x: hidden;
+        font-size: 16px;
+      }
+      h1, h2 {
+        font-size: 60px !important;
+        line-height: 1.1;
       }
       .gradient-stroke {
         border: 1px solid transparent;
-        background: linear-gradient(#0a0a0a, #0a0a0a) padding-box,
-                    linear-gradient(to bottom, #3c3c3c, transparent) border-box;
+        background: linear-gradient(#050505, #050505) padding-box,
+                    linear-gradient(to bottom, #1a1a1a, transparent) border-box;
       }
       .alcove-gradient {
-        background: radial-gradient(circle at 50% 50%, rgba(102, 64, 255, 0.15) 0%, transparent 70%);
-      }
-      .stars-container {
-        white-space: nowrap;
-        display: flex;
-      }
-      .star {
-        background: white;
-        border-radius: 50%;
-        position: absolute;
+        background: radial-gradient(circle at 50% 50%, rgba(0, 210, 255, 0.12) 0%, transparent 75%);
       }
       ::-webkit-scrollbar {
-        width: 8px;
+        width: 6px;
       }
       ::-webkit-scrollbar-track {
-        background: #0a0a0a;
+        background: #050505;
       }
       ::-webkit-scrollbar-thumb {
-        background: #333;
-        border-radius: 4px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #444;
+        background: #222;
+        border-radius: 10px;
       }
     </style>
   <script type="importmap">

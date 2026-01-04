@@ -3,20 +3,20 @@ import React from 'react';
 
 const Navbar: React.FC = () => {
   return (
-    <header className="sticky top-0 z-50 w-full px-6 py-4">
-      <nav className="mx-auto max-w-5xl flex justify-between items-center bg-gray-800/40 backdrop-blur-md border border-white/10 rounded-full px-6 py-3">
-        <div className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center font-bold text-white">L</div>
-          <span className="font-bold text-xl tracking-tight">LUMINA</span>
+    <header className="sticky top-0 z-50 w-full px-6 py-6">
+      <nav className="mx-auto max-w-6xl flex justify-between items-center bg-black/40 backdrop-blur-xl border border-white/5 rounded-full px-8 py-4">
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 bg-gradient-to-br from-primary to-brandAccent rounded-xl flex items-center justify-center font-black text-black">G</div>
+          <span className="font-extrabold text-2xl tracking-tighter">Grow<span className="text-primary">MED</span></span>
         </div>
-        <div className="hidden md:flex gap-8 items-center text-sm font-medium text-white/70">
-          <a href="#features" className="hover:text-white transition-colors">Features</a>
-          <a href="#testimonials" className="hover:text-white transition-colors">Success Stories</a>
-          <a href="#contact" className="hover:text-white transition-colors">Contact</a>
+        <div className="hidden md:flex gap-10 items-center text-sm font-semibold text-white/60">
+          <a href="#features" className="hover:text-primary transition-colors">Soluciones</a>
+          <a href="#testimonials" className="hover:text-primary transition-colors">Casos de Éxito</a>
+          <a href="#contact" className="hover:text-primary transition-colors">Contacto</a>
         </div>
         <div>
-          <button className="bg-white text-black px-5 py-2 rounded-full text-sm font-bold hover:bg-gray-200 transition-all">
-            Join Early
+          <button className="bg-white text-black px-6 py-2.5 rounded-full text-sm font-bold hover:scale-105 transition-all shadow-xl">
+            Agendar Demo
           </button>
         </div>
       </nav>
