@@ -1,34 +1,36 @@
 
 import React from 'react';
 import Hero from './components/Hero';
+import Brands from './components/Brands';
 import ValueProps from './components/ValueProps';
 import Testimonials from './components/Testimonials';
 import ContactForm from './components/ContactForm';
-import AlcoveSection from './components/AlcoveSection';
 import Background from './components/Background';
 import Footer from './components/Footer';
-import Navbar from './components/Navbar';
 
 const App: React.FC = () => {
   return (
     <div className="relative min-h-screen selection:bg-primary selection:text-white">
       <Background />
-      <Navbar />
       
       <main className="relative z-10">
         <Hero />
         
-        {/* Value Proposition Sections 1, 2, 3 */}
-        <ValueProps />
+        {/* Sección de Marcas */}
+        <Brands />
+        
+        {/* Proposiciones de Valor */}
+        <div className="relative z-20">
+          <ValueProps />
+        </div>
 
-        {/* Alcove-styled replication section */}
-        <AlcoveSection />
+        {/* Testimonios */}
+        <div className="relative z-20">
+          <Testimonials />
+        </div>
 
-        {/* Testimonials and Proof */}
-        <Testimonials />
-
-        {/* Bottom integrated form */}
-        <div id="contact" className="py-24">
+        {/* Formulario de Asesoría */}
+        <div id="contact" className="py-24 relative z-20">
           <ContactForm />
         </div>
       </main>

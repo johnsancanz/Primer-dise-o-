@@ -16,7 +16,7 @@ const ContactForm: React.FC = () => {
         <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-primary via-brandAccent to-primary" />
         
         <div className="text-center mb-12">
-          <h3 className="text-4xl font-black mb-4">Solicitar Auditoría</h3>
+          <h3 className="text-4xl font-black mb-4">Solicitar Asesoría</h3>
           <p className="text-white/40 text-lg font-light">Descubre cómo la IA puede optimizar tu crecimiento clínico.</p>
         </div>
 
@@ -27,7 +27,7 @@ const ContactForm: React.FC = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
               </svg>
             </div>
-            <p className="text-2xl font-black">Auditoría Solicitada.</p>
+            <p className="text-2xl font-black">Asesoría Solicitada.</p>
             <p className="text-white/40">Nuestros consultores clínicos le contactarán a la brevedad.</p>
           </div>
         ) : (
@@ -55,6 +55,7 @@ const ContactForm: React.FC = () => {
             <div className="space-y-2">
               <label className="text-xs font-black text-white/30 uppercase tracking-[0.2em] ml-1">Tipo de Especialidad</label>
               <select className="w-full bg-white/[0.03] border border-white/10 focus:border-primary/50 focus:bg-white/[0.08] transition-all rounded-2xl px-6 py-4 outline-none text-lg appearance-none">
+                <option className="bg-dark">Cardiología</option>
                 <option className="bg-dark">Clínica Privada Especializada</option>
                 <option className="bg-dark">Hospital General</option>
                 <option className="bg-dark">Clínica Dental/Ortodoncia</option>
@@ -71,7 +72,7 @@ const ContactForm: React.FC = () => {
               />
             </div>
             <button className="w-full py-6 bg-primary text-black font-black text-xl rounded-2xl hover:scale-[1.02] transition-all active:scale-95 shadow-2xl">
-              Solicitar Auditoría Gratuita
+              Solicitar Asesoría Gratuita
             </button>
           </form>
         )}

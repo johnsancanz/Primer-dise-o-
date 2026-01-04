@@ -2,28 +2,29 @@
 import React, { useMemo } from 'react';
 
 const Background: React.FC = () => {
+  // Generamos estrellas una sola vez
   const stars = useMemo(() => {
     return Array.from({ length: 150 }).map((_, i) => ({
       id: i,
-      left: `${Math.random() * 200}%`, // Wider than 100% for the animation
+      left: `${Math.random() * 100}%`,
       top: `${Math.random() * 100}%`,
-      size: Math.random() * 2 + 1,
-      opacity: Math.random() * 0.7 + 0.3,
+      size: Math.random() * 2 + 0.5,
+      opacity: Math.random() * 0.6 + 0.2,
+      blur: Math.random() > 0.8 ? '1px' : '0px',
     }));
   }, []);
 
   return (
-    <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden bg-dark">
-      {/* Soft Luminescence Layers */}
-      <div className="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-primary/10 rounded-full blur-[120px] animate-glow-pulse" />
-      <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-secondary/5 rounded-full blur-[100px] animate-glow-pulse delay-1000" />
-      
-      {/* Animated Star Field */}
-      <div className="absolute inset-0 animate-stars-move flex">
-        <div className="relative flex-shrink-0 w-screen h-full">
+    <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden bg-[#050505]">
+      {/* Brillo Cósmico Central Sutil */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full cosmic-radial animate-glow-pulse" />
+
+      {/* Capa de Estrellas en Movimiento (Seamless Loop) de Izquierda a Derecha */}
+      <div className="absolute inset-0 flex w-[200%] animate-stars-move opacity-40">
+        <div className="relative w-full h-full">
           {stars.map((star) => (
             <div
-              key={`star-1-${star.id}`}
+              key={`star-a-${star.id}`}
               className="absolute bg-white rounded-full"
               style={{
                 left: star.left,
@@ -31,15 +32,15 @@ const Background: React.FC = () => {
                 width: `${star.size}px`,
                 height: `${star.size}px`,
                 opacity: star.opacity,
+                filter: `blur(${star.blur})`,
               }}
             />
           ))}
         </div>
-        {/* Duplicate for seamless looping */}
-        <div className="relative flex-shrink-0 w-screen h-full">
+        <div className="relative w-full h-full">
           {stars.map((star) => (
             <div
-              key={`star-2-${star.id}`}
+              key={`star-b-${star.id}`}
               className="absolute bg-white rounded-full"
               style={{
                 left: star.left,
@@ -47,14 +48,15 @@ const Background: React.FC = () => {
                 width: `${star.size}px`,
                 height: `${star.size}px`,
                 opacity: star.opacity,
+                filter: `blur(${star.blur})`,
               }}
             />
           ))}
         </div>
       </div>
-
-      {/* Radial overlay for depth */}
-      <div className="absolute inset-0 bg-gradient-to-b from-dark via-transparent to-dark opacity-80" />
+      
+      {/* Viñeta de Profundidad */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#050505] via-transparent to-transparent opacity-80" />
     </div>
   );
 };
