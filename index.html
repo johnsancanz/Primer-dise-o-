@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lumina - Elevate Your Content</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              heading: ['Inter', 'sans-serif'],
+              serif: ['Instrument Serif', 'serif'],
+            },
+            colors: {
+              primary: '#6640ff',
+              secondary: '#fa911a',
+              dark: '#0a0a0a',
+              herogray: '#141516',
+            },
+            animation: {
+              'stars-move': 'starsMove 60s linear infinite',
+              'glow-pulse': 'glowPulse 8s ease-in-out infinite',
+              'float': 'float 6s ease-in-out infinite',
+            },
+            keyframes: {
+              starsMove: {
+                '0%': { transform: 'translateX(0)' },
+                '100%': { transform: 'translateX(-50%)' },
+              },
+              glowPulse: {
+                '0%, 100%': { opacity: 0.3, transform: 'scale(1)' },
+                '50%': { opacity: 0.6, transform: 'scale(1.1)' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0px)' },
+                '50%': { transform: 'translateY(-20px)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #0a0a0a;
+        color: white;
+        margin: 0;
+        overflow-x: hidden;
+      }
+      .gradient-stroke {
+        border: 1px solid transparent;
+        background: linear-gradient(#0a0a0a, #0a0a0a) padding-box,
+                    linear-gradient(to bottom, #3c3c3c, transparent) border-box;
+      }
+      .alcove-gradient {
+        background: radial-gradient(circle at 50% 50%, rgba(102, 64, 255, 0.15) 0%, transparent 70%);
+      }
+      .stars-container {
+        white-space: nowrap;
+        display: flex;
+      }
+      .star {
+        background: white;
+        border-radius: 50%;
+        position: absolute;
+      }
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0a0a0a;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #333;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #444;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+</head>
+  <body class="dark font-sans antialiased">
+    <div id="root"></div>
+  </body>
+</html>
