@@ -30,6 +30,7 @@
               'stars-move': 'starsMove 80s linear infinite',
               'glow-pulse': 'glowPulse 10s ease-in-out infinite',
               'float': 'float 6s ease-in-out infinite',
+              'marquee': 'marquee 40s linear infinite',
             },
             keyframes: {
               starsMove: {
@@ -43,6 +44,10 @@
               float: {
                 '0%, 100%': { transform: 'translateY(0px)' },
                 '50%': { transform: 'translateY(-15px)' },
+              },
+              marquee: {
+                '0%': { transform: 'translateX(0)' },
+                '100%': { transform: 'translateX(-50%)' },
               }
             }
           }
@@ -78,6 +83,10 @@
       ::-webkit-scrollbar-thumb {
         background: #222;
         border-radius: 10px;
+      }
+      .mask-sides {
+        -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+        mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
       }
     </style>
   <script type="importmap">
