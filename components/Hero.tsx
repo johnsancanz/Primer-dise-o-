@@ -2,6 +2,14 @@
 import React from 'react';
 
 const Hero: React.FC = () => {
+  const scrollToContact = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <section className="relative flex flex-col items-center justify-center pt-32 pb-24 text-center px-6 overflow-hidden min-h-[90vh]">
       {/* Brillo Cósmico de fondo */}
@@ -31,13 +39,14 @@ const Hero: React.FC = () => {
           que transforman clínicas locales en autoridades digitales líderes del sector.
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-6 items-center justify-center relative z-20 animate-reveal delay-400 opacity-0-start">
-          <button className="px-12 py-5 bg-primary text-black rounded-full font-black text-lg hover:scale-105 transition-all shadow-[0_0_50px_rgba(0,210,255,0.3)]">
+        <div className="flex items-center justify-center relative z-20 animate-reveal delay-400 opacity-0-start">
+          <a 
+            href="#contact"
+            onClick={scrollToContact}
+            className="px-16 py-5 bg-primary text-black rounded-full font-black text-lg hover:scale-105 active:scale-95 hover:shadow-[0_0_60px_rgba(0,210,255,0.4)] transition-all duration-500 shadow-[0_0_40px_rgba(0,210,255,0.2)] inline-block cursor-pointer"
+          >
             Iniciar Crecimiento
-          </button>
-          <button className="px-12 py-5 rounded-full bg-white/5 border border-white/10 font-bold text-lg hover:bg-white/10 transition-all backdrop-blur-md">
-            Ver Casos de Éxito
-          </button>
+          </a>
         </div>
       </div>
     </section>
