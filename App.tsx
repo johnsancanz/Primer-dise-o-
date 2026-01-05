@@ -2,7 +2,7 @@
 import React from 'react';
 import Hero from './components/Hero';
 import Brands from './components/Brands';
-import ValueProps from './components/ValueProps';
+import FeaturesShowcase from './components/FeaturesShowcase';
 import Testimonials from './components/Testimonials';
 import ContactForm from './components/ContactForm';
 import Background from './components/Background';
@@ -14,14 +14,15 @@ const App: React.FC = () => {
       <Background />
       
       <main className="relative z-10">
+        {/* El Hero tiene el protagonismo al inicio */}
         <Hero />
         
-        {/* Sección de Marcas */}
+        {/* Sección de Marcas regresada a su posición original tras el Hero */}
         <Brands />
-        
-        {/* Proposiciones de Valor */}
+
+        {/* Proposiciones de Valor / Características */}
         <div className="relative z-20">
-          <ValueProps />
+          <FeaturesShowcase />
         </div>
 
         {/* Testimonios */}
@@ -30,7 +31,7 @@ const App: React.FC = () => {
         </div>
 
         {/* Formulario de Asesoría */}
-        <div id="contact" className="py-24 relative z-20">
+        <div id="contact" className="py-16 relative z-20">
           <ContactForm />
         </div>
       </main>

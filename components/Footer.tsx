@@ -8,7 +8,9 @@ const Footer: React.FC = () => {
         <div className="col-span-1 md:col-span-1">
           <div className="flex items-center gap-3 mb-8">
             <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center font-black text-black text-xl">G</div>
-            <span className="font-black text-2xl tracking-tighter">Grow<span className="text-primary">MED</span></span>
+            <span className="font-black text-2xl tracking-tighter text-white">
+              Grow<span className="inline-block bg-gradient-to-r from-sky-400 to-purple-300 bg-clip-text text-transparent ml-1 px-0.5 italic font-serif">MED</span>
+            </span>
           </div>
           <p className="text-white/30 text-sm leading-relaxed max-w-xs font-medium">
             Construyendo el futuro digital de la medicina. Nuestra misión es acelerar la excelencia médica mediante tecnología de élite.

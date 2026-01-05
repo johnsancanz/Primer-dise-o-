@@ -7,7 +7,9 @@ const Navbar: React.FC = () => {
       <nav className="mx-auto max-w-6xl flex justify-between items-center bg-black/40 backdrop-blur-xl border border-white/5 rounded-full px-8 py-4">
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 bg-gradient-to-br from-primary to-brandAccent rounded-xl flex items-center justify-center font-black text-black">G</div>
-          <span className="font-extrabold text-2xl tracking-tighter">Grow<span className="text-primary">MED</span></span>
+          <span className="font-extrabold text-2xl tracking-tighter text-white">
+            Grow<span className="inline-block bg-gradient-to-r from-sky-400 to-purple-300 bg-clip-text text-transparent ml-1 px-0.5 italic font-serif">MED</span>
+          </span>
         </div>
         <div className="hidden md:flex gap-10 items-center text-sm font-semibold text-white/60">
           <a href="#features" className="hover:text-primary transition-colors">Soluciones</a>

@@ -31,6 +31,7 @@
               'glow-pulse': 'glowPulse 10s ease-in-out infinite',
               'float': 'float 6s ease-in-out infinite',
               'marquee': 'marquee 40s linear infinite',
+              'reveal': 'revealUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards',
             },
             keyframes: {
               starsMove: {
@@ -48,6 +49,10 @@
               marquee: {
                 '0%': { transform: 'translateX(0)' },
                 '100%': { transform: 'translateX(-50%)' },
+              },
+              revealUp: {
+                '0%': { transform: 'translateY(60px)', opacity: '0' },
+                '100%': { transform: 'translateY(0)', opacity: '1' },
               }
             }
           }
@@ -88,6 +93,12 @@
         -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
         mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
       }
+      .delay-100 { animation-delay: 100ms; }
+      .delay-200 { animation-delay: 200ms; }
+      .delay-300 { animation-delay: 300ms; }
+      .delay-400 { animation-delay: 400ms; }
+      .delay-500 { animation-delay: 500ms; }
+      .opacity-0-start { opacity: 0; }
     </style>
   <script type="importmap">
 {

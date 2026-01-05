@@ -24,8 +24,8 @@ const Brands: React.FC = () => {
   const duplicatedBrands = [...brands, ...brands];
 
   return (
-    <section className="relative py-20 z-20 overflow-hidden">
-      <div className="max-w-7xl mx-auto flex flex-col items-center mb-12">
+    <section className="relative py-12 z-20 overflow-hidden">
+      <div className="max-w-7xl mx-auto flex flex-col items-center mb-8">
         <p className="text-[10px] md:text-xs font-bold text-white/20 uppercase tracking-[0.4em]">
           MARCAS CON LAS QUE TRABAJAMOS
         </p>
@@ -48,8 +48,8 @@ const Brands: React.FC = () => {
         </div>
       </div>
       
-      {/* Sutil divisor inferior */}
-      <div className="max-w-4xl mx-auto h-px bg-gradient-to-r from-transparent via-white/5 to-transparent mt-20" />
+      {/* Sutil divisor inferior con menos margen */}
+      <div className="max-w-4xl mx-auto h-px bg-gradient-to-r from-transparent via-white/5 to-transparent mt-12" />
     </section>
   );
 };
